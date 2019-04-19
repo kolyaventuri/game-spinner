@@ -2,8 +2,38 @@
 
 import React from 'react';
 
-const App = () => <div/>;
+import {getString} from './lib/strings';
+import {generateGame} from './lib/game-generator';
 
-App.displayName = 'App';
+type State = {|
+  game: string
+|};
 
-export default App;
+export default class App extends React.Component<{}, State> {
+  constructor(...args) {
+    super(...args);
+    this.state = {game: ''};
+  }
+
+  genGame = () => {
+    const game = generateGame();
+
+    this.setState({game});
+  }
+
+  render() {
+    const {game} = this.state;
+
+    return (
+      <div>
+        <button
+          type="button"
+          onClick={this.genGame}
+        >
+          {getString('generate')}
+        </button>
+        <p className="game">{game}</p>
+      </div>
+    );
+  }
+}
