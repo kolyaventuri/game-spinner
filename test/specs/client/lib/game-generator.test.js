@@ -5,6 +5,7 @@ const verbs = ['crash'];
 const nouns = ['car'];
 const adjectives = ['blue'];
 
+proxyquire.noCallThru();
 const {generateGame} = proxyquire('../../../../client/lib/game-generator', {
   '../constants/verbs': verbs,
   '../constants/nouns': nouns,
