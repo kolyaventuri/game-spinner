@@ -10,7 +10,7 @@ type State = {|
 |};
 
 export default class App extends React.Component<{}, State> {
-  constructor(...args) {
+  constructor(...args: any) {
     super(...args);
     this.state = {game: ''};
   }
