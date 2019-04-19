@@ -11,6 +11,9 @@ jobs:
           name: install-npm
           command: 'npm install --production'
       - run:
+          name: prune
+          command: 'npm prune --production'
+      - run:
           name: build
           command: 'npm build'
   test:
