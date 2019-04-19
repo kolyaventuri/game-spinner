@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/kolyaventuri/game-spinner#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/register": "^7.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -35,11 +37,11 @@
     "quickstring": "^1.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "scriba": "^1.0.5"
+    "scriba": "^1.0.5",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.4.3",
-    "@babel/preset-flow": "^7.0.0",
     "autoprefixer": "^9.5.1",
     "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
@@ -57,8 +59,6 @@
     "flow-bin": "^0.97.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.11",
-    "parcel-bundler": "^1.12.3",
-    "postcss-modules": "^1.4.1",
     "pre-commit": "^1.2.2",
     "proxyquire": "^2.1.0",
     "sass": "^1.19.0",
