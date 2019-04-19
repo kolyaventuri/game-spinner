@@ -1,1 +1,1 @@
-# game-spinner
+# Game Spinner

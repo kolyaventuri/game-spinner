@@ -1,0 +1,102 @@
+{
+  "name": "game-spinner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/start",
+    "dev": "nodemon --ignore client/ --ignore static/javascripts/ --exec node ./bin/start",
+    "build": "parcel build client/app.js -d static/javascripts --out-file bundle.js",
+    "test": "flow && xo && ava",
+    "flow": "flow",
+    "lint": "flow && xo",
+    "lint:soft": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolyaventuri/game-spinner.git"
+  },
+  "author": "Kolya Venturi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kolyaventuri/game-spinner/issues"
+  },
+  "homepage": "https://github.com/kolyaventuri/game-spinner#readme",
+  "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "koa": "^2.7.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-flow": "^7.0.0",
+    "ava": "^1.4.1",
+    "babel-eslint": "^10.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "eslint": "^5.16.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-config-xo-react": "^0.19.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flow-header": "^0.2.0",
+    "eslint-plugin-flowtype": "^3.6.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "flow-bin": "^0.97.0",
+    "nodemon": "^1.18.11",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "pre-commit": "^1.2.2",
+    "proxyquire": "^2.1.0",
+    "sass": "^1.19.0",
+    "sinon": "^7.3.2",
+    "xo": "^0.24.0"
+  },
+  "pre-commit": [
+    "lint:soft"
+  ],
+  "xo": {
+    "parser": "babel-eslint",
+    "space": true,
+    "extends": [
+      "xo-react/space",
+      "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+      "babel",
+      "flowtype"
+    ],
+    "rules": {
+      "babel/semi": true
+    },
+    "settings": {
+      "react": {
+        "version": "16.5"
+      }
+    },
+    "env": [
+      "browser",
+      "node"
+    ],
+    "ignore": [
+      "static/javascripts/**/*.js"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ],
+    "require": [
+      "@babel/register",
+      "@babel/polyfill",
+      "./test/helpers/setup-enzyme"
+    ]
+  }
+}
