@@ -11,6 +11,6 @@ const options = {
   publicUrl: '/javascripts'
 };
 
-const bundler = new Bundler(path.join(dir, 'app.js'), options);
+const bundler = new Bundler(path.join(dir, 'index.js'), options);
 
 bundler.bundle();
