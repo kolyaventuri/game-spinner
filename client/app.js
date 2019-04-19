@@ -32,6 +32,7 @@ export default class App extends React.Component<{}, State> {
         >
           {getString('generate')}
         </button>
+        <h1 className="game-intro">{getString('gamePrefix')}</h1>
         <p className="game">{game}</p>
       </div>
     );
