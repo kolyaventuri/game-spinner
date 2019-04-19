@@ -15,7 +15,7 @@ const {generateGame} = proxyquire('../../../../client/lib/game-generator', {
 test('it can generate a game string', t => {
   const result = generateGame();
 
-  const expected = 'crash blue cars, to crash cars';
+  const expected = 'crash blue cars, to crash cars.';
 
   t.is(result, expected);
 });
