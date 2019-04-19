@@ -1,5 +1,5 @@
 {
-  "gameIdeaTemplate": "{verb1} {adjective} {noun1}, to {verb2} {noun2}",
-  "generate": "Generate",
+  "gameIdeaTemplate": "{verb1} {adjective} {noun1}, to {verb2} {noun2}.",
+  "generate": "Give me an idea...",
   "gamePrefix": "A game in which you..."
 }

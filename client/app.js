@@ -25,9 +25,10 @@ export default class App extends React.Component<{}, State> {
     const {game} = this.state;
 
     return (
-      <div>
+      <div className="container">
         <button
           type="button"
+          className="button"
           onClick={this.genGame}
         >
           {getString('generate')}
