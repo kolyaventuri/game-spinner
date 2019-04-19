@@ -1,6 +1,17 @@
 version: 2
 jobs:
   build:
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm
+          command: 'npm install --production'
+      - run:
+          name: build
+          command: 'npm build'
+  test:
     docker:
       - image: circleci/node:10.15.0
     steps:
@@ -10,9 +21,6 @@ jobs:
       - run:
           name: install-npm
           command: 'npm install'
-      - run:
-          name: build
-          command: 'npm build'
       - run:
           name: test
           command: 'npm run test'
