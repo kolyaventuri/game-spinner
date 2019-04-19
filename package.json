@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kolyaventuri/game-spinner#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-flow": "^7.0.0",
@@ -41,7 +42,6 @@
     "postcss-modules": "^1.4.1"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.4.3",
     "autoprefixer": "^9.5.1",
     "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
